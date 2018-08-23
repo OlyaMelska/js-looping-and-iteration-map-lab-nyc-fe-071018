@@ -28,6 +28,13 @@ newDrivers2 = drivers2.reduce(function (driver, first, last){
   return driver;
 })
 
+function nameToAttributes(drivers){
+   return drivers.map(function (driver) {
+     let name1 = driver.split(' ')[0];
+     let name2 = driver.split(' ')[1];
+    return { firstName: name1, lastName: name2}
+   })
+ }
 
 console.log(newDrivers2)
 
